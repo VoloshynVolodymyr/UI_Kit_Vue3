@@ -28,6 +28,8 @@
         {name: 'ProgressBar', href: '/progress'},
         {name: 'Input', href: '/input'},
         {name: 'Alert', href: '/alert'},
+        {name: 'Tabs', href: '/tabs'},
+        {name: 'Table', href: '/table'},
     ])
 </script>
 

@@ -1,6 +1,7 @@
 <template>
     <h1 class="heading-1">Alert</h1>
     <div class="line">
+
         <div v-if="showAlert" class="alert-wrapper">
             <Alert
                     :show="showAlert"

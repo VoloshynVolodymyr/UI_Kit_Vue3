@@ -7,7 +7,7 @@
     </div>
     <h2 class="heading-2">Colors</h2>
     <div class="line">
-        <Button label="Primary" color="primary" />
+        <Button label="Primary" color="primary"/>
         <Button label="Secondary" color="second" />
         <Button label="Success" color="success" />
         <Button label="Info" color="info" />

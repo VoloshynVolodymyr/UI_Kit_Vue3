@@ -1,6 +1,6 @@
 <template>
     <button
-            :class="['btn', `btn_${color}`, {'btn_rounded': rounded}, {'btn_outlined': outlined}, {'btn_icon': icon}, {'btn_large': size==='large'}]"
+            :class="['btn', `btn_${color}`, {'rounded-md': rounded}, {'btn_outlined': outlined}, {'btn_icon': icon}, {'btn_large': size==='large'}]"
             :disabled="disabled"
             @click="clickOnButton"
     >
@@ -27,7 +27,7 @@
         },
         rounded: {
             type: Boolean,
-            required: false
+            required: true
         },
         outlined: {
             type: Boolean,
@@ -58,7 +58,6 @@
         padding: 0 20px;
         height: 40px;
         color: #fff;
-        border-radius: 7px;
         border: none;
         cursor: pointer;
         font-size: 15px;
@@ -123,9 +122,6 @@
             cursor: default;
         }
 
-        &_rounded {
-            border-radius: 15px;
-        }
 
         &_outlined {
             background: transparent;

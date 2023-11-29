@@ -7,6 +7,8 @@ import Typography from '@/views/Typography.vue'
 import Progress from '@/views/Progress.vue'
 import Input from '@/views/Input.vue'
 import Alert from '@/views/Alert.vue'
+import Tabs from '@/views/Tabs.vue'
+import Table from '@/views/Table.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -50,6 +52,16 @@ const router = createRouter({
             path: '/alert',
             name: 'Alert',
             component: Alert,
+        },
+        {
+            path: '/tabs',
+            name: 'Tabs',
+            component: Tabs,
+        },
+        {
+            path: '/table',
+            name: 'Table',
+            component: Table,
         },
     ]
 })

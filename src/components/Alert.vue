@@ -2,6 +2,8 @@
     import { defineProps, computed, ref } from 'vue';
     import { faHandPointUp, faCircleCheck, faCircleStop, faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 
+    const beforeEnter = ref(null);
+    const afterLeave = ref(null);
     const props = defineProps({
         intent: {
             type: String,
@@ -39,13 +41,13 @@
     const titleClass = computed(() => {
         const intentClass = props.intent;
 
-        return `font-medium ${intentClass}-900`;
+        return `font-medium ${intentClass}`;
     });
 
     const contentClass = computed(() => {
         const intentClass = props.intent;
 
-        return `text-sm ${intentClass}-800`;
+        return `text-sm ${intentClass}`;
     });
 
     const closeButtonClass = computed(() => {
@@ -83,10 +85,10 @@
                 <font-awesome-icon :icon="iconComponent" :class="iconClass" />
             </div>
             <div class="flex-1 space-y-2 min-w-0">
-                <h2 v-if="props.title" :class="titleClass">
+                <h2 v-if="props.title" :class="['titleClass', 'title']">
                     {{ props.title }}
                 </h2>
-                <div :class="contentClass">
+                <div :class="['contentClass','slot-content']">
                     <slot />
                 </div>
             </div>
@@ -157,5 +159,12 @@
     .danger {
         background-color: var(--danger-hover);
         color: var(--danger);
+    }
+    .title {
+        text-align: center;
+        font-size: 24px;
+    }
+    .slot-content {
+        text-align: center;
     }
 </style>
